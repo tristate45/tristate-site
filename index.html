@@ -1,27 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tri-State Attendants | Event Cleaning & Staffing</title>
 
-<title>Tri-State Attendants | Event Cleaning & Staffing NJ NYC PA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<meta name="description" content="Event cleaning, staffing, and site support for construction, events, and rental companies. Fast response. Reliable crews. NJ, NYC, PA." />
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #0b1220;
+  color: white;
+}
 
-<link rel="stylesheet" href="./base.css" />
-<link rel="stylesheet" href="./style.css" />
-<script src="./app.js" defer></script>
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
+}
 
+/* NAV */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(11,18,32,0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #22c55e;
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 0 90px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(11,18,32,1)),
+              url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1920');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 800;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #cbd5e1;
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.trust {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* SECTION */
+.section {
+  padding: 90px 0;
+}
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* TRUST BAR */
+.trust-bar {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* CONTACT */
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      Tri-State Attendants
-    </div>
+<header>
+  <div class="container nav">
+    <div class="logo">Tri-State Attendants</div>
 
     <nav>
       <a href="#services">Services</a>
@@ -29,162 +176,87 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <div>
-      <a href="tel:+17324005052" class="btn btn-outline">Call 732-400-5052</a>
+    <div class="nav-right">
+      <a href="tel:17324005052" class="btn btn-outline">Call 732-400-5052</a>
       <a href="#contact" class="btn btn-primary">Get a Fast Quote</a>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-
   <div class="container">
 
+    <p style="color:#22c55e; font-weight:600;">✔ Serving NJ, NYC & Eastern PA</p>
+
     <h1>
-      Event Cleaning & Staffing for Construction, Events & Rental Companies That Need Reliable Crews — Fast
+      Reliable Event Cleaning & Staffing That Shows Up — Every Time
     </h1>
 
     <p>
-      Fast, reliable crews for events, construction sites, and rental companies.
-      No no-shows. No runaround. Just dependable service when you need it.
+      Fast, professional crews for events, construction sites, and rental companies.
+      No no-shows. No excuses. Just dependable service when you need it.
     </p>
 
-    <p style="margin-top:10px; font-weight:600;">
-      Perfect for: Construction Companies • Event Organizers • Rental Companies • Property Managers
-    </p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Get a Quote in 10 Minutes</a>
+      <a href="tel:17324005052" class="btn btn-outline">Call Now</a>
+    </div>
 
-    <div style="margin-top:20px;">
-      <a href="#contact" class="btn btn-primary">Get a Fast Quote</a>
-      <a href="tel:+17324005052" class="btn btn-outline">Call Now — Immediate Response</a>
+    <div class="trust">
+      ✔ Same-day availability • ✔ Fully insured • ✔ Trusted by local companies
     </div>
 
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div style="background:#0f172a;color:#fff;padding:12px;text-align:center;font-weight:600;">
-✔ Fully Insured &nbsp; | &nbsp;
-✔ Fast Response &nbsp; | &nbsp;
-✔ Crews That Show Up &nbsp; | &nbsp;
-✔ NJ • NYC • PA Coverage
+<div class="trust-bar">
+  Trusted by contractors, event producers, and rental companies across NJ, NYC & PA
 </div>
 
-<!-- SERVICES -->
-<section id="services" class="section">
+<section class="section" id="services">
   <div class="container">
-
-    <h2>Services</h2>
+    <h2>Our Services</h2>
 
     <div class="grid">
-
-      <div class="card">
-        <h3>Event Cleaning</h3>
-        <p>Before, during, and after event cleaning for festivals, weddings, and large venues.</p>
-      </div>
-
-      <div class="card">
-        <h3>Event Staffing</h3>
-        <p>Reliable on-site staff to support operations, cleanup, and event flow.</p>
-      </div>
-
-      <div class="card">
-        <h3>Construction & Site Support</h3>
-        <p>Labor and cleanup support for construction sites and rental operations.</p>
-      </div>
-
+      <div class="card">Event Cleaning</div>
+      <div class="card">Construction Site Cleaning</div>
+      <div class="card">Rental & Porta Potty Support</div>
+      <div class="card">General Labor & Staffing</div>
     </div>
-
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<section id="industries" class="section">
+<section class="section" id="industries">
   <div class="container">
-
     <h2>Who We Work With</h2>
 
-    <p>
-      Built for companies that need reliable labor and fast response.
-    </p>
-
-    <ul>
-      <li>Construction Companies</li>
-      <li>Event Organizers</li>
-      <li>Portable Sanitation Companies</li>
-      <li>Rental Companies</li>
-      <li>Property Managers</li>
-    </ul>
-
+    <div class="grid">
+      <div class="card">Construction Companies</div>
+      <div class="card">Event Producers</div>
+      <div class="card">Rental Companies</div>
+      <div class="card">Venues & Facilities</div>
+    </div>
   </div>
 </section>
 
-<!-- URGENCY BLOCK -->
-<section style="background:#111827;color:#fff;padding:50px;text-align:center;">
-  <h2>Need a Crew Fast?</h2>
-  <p>We handle last-minute jobs and urgent requests.</p>
-
-  <a href="#contact" class="btn btn-primary">Get a Fast Quote</a>
-  <a href="tel:+17324005052" class="btn btn-outline">Call Now</a>
-</section>
-
-<!-- WHY US -->
-<section class="section">
+<section class="section" id="contact">
   <div class="container">
-
-    <h2>Why Companies Choose Us</h2>
-
-    <ul>
-      <li>Fast response when you need it</li>
-      <li>Crews that actually show up</li>
-      <li>Clear communication</li>
-      <li>Flexible scheduling</li>
-    </ul>
-
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="section">
-  <div class="container">
-
-    <h2>Trusted Across the Tri-State Area</h2>
-
-    <p>
-      We work with construction companies, event organizers, and rental partners who need dependable crews.
-    </p>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container">
-
-    <h2>Get a Quote</h2>
+    <h2>Get a Fast Quote</h2>
 
     <form>
+      <input placeholder="Your Name">
+      <input placeholder="Phone Number">
+      <input placeholder="Email">
+      <textarea placeholder="Tell us about your job"></textarea>
 
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <input type="tel" placeholder="Phone" required />
-
-      <textarea placeholder="Tell us about the job"></textarea>
-
-      <button type="submit" class="btn btn-primary">Send Request</button>
-
-      <p style="font-size:14px;margin-top:10px;">
-        ✔ No long contracts &nbsp; ✔ Fast response &nbsp; ✔ Flexible scheduling
-      </p>
-
+      <button class="btn btn-primary">Request Quote</button>
     </form>
 
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="text-align:center;padding:20px;">
-  <p>© 2026 Tri-State Attendants</p>
+<footer>
+  © 2026 Tri-State Attendants & Janitorial Services
 </footer>
 
 </body>

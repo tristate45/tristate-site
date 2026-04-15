@@ -305,74 +305,117 @@
 
         <form class="form-grid">
 
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="John Smith" required />
-          </div>
-
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="john@example.com" required />
-          </div>
-
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="tel" placeholder="(555) 123-4567" />
-          </div>
-
-          <div class="form-group">
-            <label>City / State</label>
-            <input type="text" placeholder="Glassboro, NJ" />
-          </div>
-
-          <div class="form-group">
-            <label>Transportation</label>
-            <select>
-              <option>Select one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Cleaning Experience</label>
-            <select>
-              <option>Select experience</option>
-              <option>No experience</option>
-              <option>1–2 years</option>
-              <option>3+ years</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>Available for nights/weekends?</label>
-            <select>
-              <option>Select one</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-          </div>
-
-          <div class="form-group full-width">
-            <label>Work History / Experience</label>
-            <textarea placeholder="Tell us about your experience"></textarea>
-          </div>
-
-          <div class="form-group full-width">
-            <label>Why do you want to join our team?</label>
-            <textarea placeholder="Tell us why you'd be a good fit"></textarea>
-          </div>
-
-          <div class="form-submit full-width">
-            <button type="submit" class="btn btn-primary">Submit Application</button>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
+  <!-- BASIC INFO -->
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" name="fullName" placeholder="John Smith" required />
   </div>
-</section>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="john@example.com" required />
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="tel" name="phone" placeholder="(555) 123-4567" required />
+  </div>
+
+  <div class="form-group">
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required />
+  </div>
+
+  <div class="form-group full-width">
+    <label>Home Address</label>
+    <input type="text" name="address" placeholder="Street, City, State, Zip" required />
+  </div>
+
+  <!-- TAX INFO -->
+  <div class="form-group">
+    <label>Filing Status</label>
+    <select name="filingStatus" required>
+      <option value="">Select one</option>
+      <option>Single</option>
+      <option>Married</option>
+      <option>Head of Household</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Additional Federal Tax Withholding?</label>
+    <select name="extraTax" required>
+      <option value="">Select one</option>
+      <option>No</option>
+      <option>Yes</option>
+    </select>
+  </div>
+
+  <!-- DOCUMENT VERIFICATION -->
+  <div class="form-group full-width">
+    <label>Identification You Will Provide</label>
+    <select name="idType" required>
+      <option value="">Select one</option>
+      <option>Passport</option>
+      <option>Driver’s License</option>
+      <option>Permanent Resident Card</option>
+    </select>
+    <p class="form-note">
+      Please send a photo of your selected ID via text or email after submitting this form.
+    </p>
+  </div>
+
+  <!-- PAYROLL -->
+  <div class="form-group">
+    <label>Preferred Payment Method</label>
+    <select name="paymentMethod" required>
+      <option value="">Select one</option>
+      <option>Direct Deposit</option>
+      <option>Check</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Bank Name</label>
+    <input type="text" name="bankName" placeholder="Bank of America, Chase, etc." />
+    <p class="form-note">
+      If using direct deposit, please send a voided check via text or email.
+    </p>
+  </div>
+
+  <!-- OPERATIONS -->
+  <div class="form-group">
+    <label>Do you have reliable transportation?</label>
+    <select name="transportation" required>
+      <option value="">Select one</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Do you have a TWIC Card?</label>
+    <select name="twic" required>
+      <option value="">Select one</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>Not sure what this is</option>
+    </select>
+    <p class="form-note">
+      A TWIC (Transportation Worker Identification Credential) is required for certain job sites.
+      Learn more here:
+      <a href="https://www.tsa.gov/for-industry/twic" target="_blank">TWIC Information</a>
+    </p>
+  </div>
+
+  <!-- SUBMIT -->
+  <div class="form-submit full-width">
+    <button type="submit" class="btn btn-primary">Submit Information</button>
+  </div>
+
+</form>
+
+          
 <!-- PASTE NEW JOB APPLICATION SECTION HERE -->
 
 <section class="contact-section" id="job-application">

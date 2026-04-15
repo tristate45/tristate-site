@@ -72,7 +72,7 @@
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="#contact" class="btn-nav">Get a Quote</a>
+        <a href="javascript:void(0)" onclick="showSection('contact')" class="btn-nav">Get a Quote</a>
         <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
@@ -106,7 +106,7 @@
           <h1>Event Cleaning You Can Count On</h1>
           <p>Professional janitorial services for festivals, concerts, weddings, and more. We handle the cleanup so you can focus on the event.</p>
           <div class="hero-ctas">
-            <a href="#contact" class="btn btn-primary">Request a Free Quote</a>
+            <a href="javascript:void(0)" onclick="showSection('contact')" class="btn btn-primary">Request a Free Quote</a>
             <a href="#services" class="btn btn-outline">View Our Services</a>
           </div>
         </div>
@@ -278,7 +278,7 @@
             </div>
             <div class="careers-cta">
               <p>Interested in joining our team?</p>
-              <a href="#job-application" class="btn btn-outline btn-sm">Apply Now</a>
+              <a href="javascript:void(0)" onclick="showSection('job-application')" class="btn btn-outline btn-sm">Apply Now</a>
             </div>
           </div>
         </div>
@@ -636,4 +636,18 @@
   });
 })();
 </script></body>
+        <script>
+  function showSection(sectionId) {
+    // Hide both sections first
+    document.getElementById("job-application").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+
+    // Show the selected section
+    const section = document.getElementById(sectionId);
+    section.style.display = "block";
+
+    // Scroll to it smoothly
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
 </html>

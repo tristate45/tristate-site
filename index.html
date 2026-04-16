@@ -72,7 +72,6 @@
         <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="#contact" class="btn-nav">Get a Quote</a>
         <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
         </button>
@@ -86,7 +85,7 @@
       <a href="#events">Events We Cover</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" class="btn-mobile-cta">Get a Quote</a>
+      <a href="javascript:void(0)" onclick="showSection('contact')" class="btn-nav">Get a Quote</a>
     </nav>
   </header>
 
@@ -98,12 +97,7 @@
         <div class="hero-overlay"></div>
       </div>
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            Serving NJ, NYC &amp; Eastern PA
-          </div>
-          <h1>Event Cleaning You Can Count On</h1>
+                 <h1>Event Cleaning You Can Count On</h1>
           <p>Professional janitorial services for festivals, concerts, weddings, and more. We handle the cleanup so you can focus on the event.</p>
           <div class="hero-ctas">
             <a href="javascript:void(0)" onclick="showSection('contact')" class="btn btn-primary">Request a Free Quote</a>
@@ -117,22 +111,20 @@
     <div class="stats-bar">
       <div class="container">
         <div class="stats-grid reveal-stagger">
-          <div class="stat-item">
-            <h3>500+</h3>
-            <p>Events Served</p>
-          </div>
-          <div class="stat-item">
-            <h3>3</h3>
-            <p>States Covered</p>
-          </div>
-          <div class="stat-item">
-            <h3>24/7</h3>
-            <p>Weekend &amp; Holiday Service</p>
-          </div>
-          <div class="stat-item">
-            <h3>100%</h3>
-            <p>Satisfaction Guaranteed</p>
-          </div>
+        <div class="stat-item">
+  <h3>500+</h3>
+  <p>Events Served</p>
+</div>
+
+<div class="stat-item">
+  <h3>24/7</h3>
+  <p>Weekend & Holiday Service</p>
+</div>
+
+<div class="stat-item">
+  <h3>100%</h3>
+  <p>Satisfaction Guaranteed</p>
+</div>
         </div>
       </div>
     </div>
@@ -634,7 +626,19 @@
   });
 })();
 </script></body>
-        <script>
+      
+          <section id="contact" style="display:none; padding:60px; background:#0b0f19; color:white;">
+  <h2>Request a Free Quote</h2>
+  <p>Fill out the form below and we’ll get back to you shortly.</p>
+
+  <form>
+    <input type="text" placeholder="Name" required /><br><br>
+    <input type="email" placeholder="Email" required /><br><br>
+    <input type="tel" placeholder="Phone" /><br><br>
+    <textarea placeholder="Tell us about your event"></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+</section>
   function showSection(sectionId) {
     // Hide both sections first
     document.getElementById("job-application").style.display = "none";

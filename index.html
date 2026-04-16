@@ -636,31 +636,16 @@
     }
   });
 })();
-</script></body>
-      
-          <section id="contact" style="display:none; padding:60px; background:#0b0f19; color:white;">
-  <h2>Request a Free Quote</h2>
-  <p>Fill out the form below and we’ll get back to you shortly.</p>
+function showSection(sectionId) {
+  document.getElementById("job-application").style.display = "none";
+  document.getElementById("contact").style.display = "none";
 
-  <form>
-    <input type="text" placeholder="Name" required /><br><br>
-    <input type="email" placeholder="Email" required /><br><br>
-    <input type="tel" placeholder="Phone" /><br><br>
-    <textarea placeholder="Tell us about your event"></textarea><br><br>
-    <button type="submit">Submit</button>
-  </form>
-</section>
-  function showSection(sectionId) {
-    // Hide both sections first
-    document.getElementById("job-application").style.display = "none";
-    document.getElementById("contact").style.display = "none";
-
-    // Show the selected section
-    const section = document.getElementById(sectionId);
+  const section = document.getElementById(sectionId);
+  if (section) {
     section.style.display = "block";
-
-    // Scroll to it smoothly
     section.scrollIntoView({ behavior: "smooth" });
   }
+}
 </script>
+</body>
 </html>

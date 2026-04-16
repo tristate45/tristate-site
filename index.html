@@ -65,7 +65,7 @@
       <nav class="nav-desktop" aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="javascript:void(0)" onclick="showSection('contact')" class="btn-nav">Get a Quote</a>
+        <button type="button" class="btn-nav" onclick="showSection('contact')">Get a Quote</button>
       </nav>
 
       <div class="header-actions">
@@ -85,7 +85,7 @@
       <a href="#events">Events We Cover</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="javascript:void(0)" onclick="showSection('contact')" class="btn-nav">Get a Quote</a>
+      <button type="button" class="btn-nav" onclick="showSection('contact')">Get a Quote</button>
     </nav>
   </header>
 
@@ -97,12 +97,11 @@
         <div class="hero-overlay"></div>
       </div>
       <div class="container">
-                 <h1>Event Cleaning You Can Count On</h1>
-          <p>Professional janitorial services for festivals, concerts, weddings, and more. We handle the cleanup so you can focus on the event.</p>
-          <div class="hero-ctas">
-            <a href="javascript:void(0)" onclick="showSection('contact')" class="btn btn-primary">Request a Free Quote</a>
-            <a href="#services" class="btn btn-outline">View Our Services</a>
-          </div>
+        <h1>Event Cleaning You Can Count On</h1>
+        <p>Professional janitorial services for festivals, concerts, weddings, and more. We handle the cleanup so you can focus on the event.</p>
+        <div class="hero-ctas">
+          <button type="button" class="btn btn-primary" onclick="showSection('contact')">Request a Free Quote</button>
+          <a href="#services" class="btn btn-outline">View Our Services</a>
         </div>
       </div>
     </section>
@@ -111,20 +110,18 @@
     <div class="stats-bar">
       <div class="container">
         <div class="stats-grid reveal-stagger">
-        <div class="stat-item">
-  <h3>500+</h3>
-  <p>Events Served</p>
-</div>
-
-<div class="stat-item">
-  <h3>24/7</h3>
-  <p>Weekend & Holiday Service</p>
-</div>
-
-<div class="stat-item">
-  <h3>100%</h3>
-  <p>Satisfaction Guaranteed</p>
-</div>
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Events Served</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Weekend &amp; Holiday Service</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Satisfaction Guaranteed</p>
+          </div>
         </div>
       </div>
     </div>
@@ -151,7 +148,6 @@
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -235,8 +231,6 @@
       </div>
     </section>
 
-
-
     <!-- ======================== ABOUT ======================== -->
     <section class="about-section" id="about">
       <div class="container">
@@ -270,274 +264,35 @@
             </div>
             <div class="careers-cta">
               <p>Interested in joining our team?</p>
-             <a href="javascript:void(0)" onclick="showSection('job-application')" class="btn btn-outline btn-sm">Apply Now</a>
+              <button type="button" class="btn btn-outline btn-sm" onclick="showSection('job-application')">Apply Now</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-<section class="contact-section" id="job-application" style="display: none; padding: 80px 0;">
-  <div class="container">
-    <div class="contact-layout">
-
-      <div class="contact-info reveal">
-        <span class="section-label">Join Our Team</span>
-        <h2>Apply to Work With Us</h2>
-        <p>Interested in working with Tri-State Attendants & Janitorial Services? Fill out the application and our team will review your information for current and upcoming opportunities.</p>
-
-        <div class="service-area">
-          <h4>What We’re Looking For</h4>
-          <p>Reliable individuals with strong work ethic, customer service mindset, and availability for events, nights, and weekends.</p>
-        </div>
-      </div>
-
-      <div class="quote-form-card reveal">
-        <h3>Job Application</h3>
-
-        <form class="form-grid" action="https://formspree.io/f/mojyeeej" method="POST">
-<input type="hidden" name="formType" value="Job Application">
-  <!-- BASIC INFO -->
-  <div class="form-group">
-    <label>Full Name</label>
-    <input type="text" name="fullName" placeholder="John Smith" required />
-  </div>
-
-  <div class="form-group">
-    <label>Email</label>
-    <input type="email" name="email" placeholder="john@example.com" required />
-  </div>
-
-  <div class="form-group">
-    <label>Phone</label>
-    <input type="tel" name="phone" placeholder="(555) 123-4567" required />
-  </div>
-
-  <div class="form-group">
-    <label>Date of Birth</label>
-    <input type="date" name="dob" required />
-  </div>
-
-  <div class="form-group full-width">
-    <label>Home Address</label>
-    <input type="text" name="address" placeholder="Street, City, State, Zip" required />
-  </div>
-
-  <!-- TAX INFO -->
-  <div class="form-group">
-    <label>Filing Status</label>
-    <select name="filingStatus" required>
-      <option value="">Select one</option>
-      <option>Single</option>
-      <option>Married</option>
-      <option>Head of Household</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label>Additional Federal Tax Withholding?</label>
-    <select name="extraTax" required>
-      <option value="">Select one</option>
-      <option>No</option>
-      <option>Yes</option>
-    </select>
-  </div>
-<section class="contact-section" id="job-application" style="display:none;">
-  <div class="container">
-    <div class="contact-layout">
-
-      <div class="contact-info">
-        <span class="section-label">Join Our Team</span>
-        <h2>Apply to Work With Us</h2>
-        <p>Fill out the application and we’ll review your information.</p>
-      </div>
-
-      <div class="quote-form-card">
-        <h3>Job Application</h3>
-
-        <form action="https://formspree.io/f/mojyeeej" method="POST">
-          <input type="hidden" name="formType" value="Job Application">
-
-          <input type="text" name="fullName" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="tel" name="phone" placeholder="Phone" required />
-
-          <button type="submit" class="btn btn-primary">Submit Application</button>
-        </form>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-    <!-- ======================== CONTACT / QUOTE FORM ======================== -->
-<section class="contact-section" id="contact">
-  <div class="container">
+    <!-- ======================== JOB APPLICATION FORM ======================== -->
+    <section class="contact-section" id="job-application" style="display: none;">
+      <div class="container">
         <div class="contact-layout">
           <div class="contact-info reveal">
-            <span class="section-label">Get In Touch</span>
-            <h2>Ready for a Cleaner Event?</h2>
-            <p>Call us directly or fill out the form and we'll get back to you with a free, no-obligation quote.</p>
-
-            <div class="contact-methods">
-              <div class="contact-method">
-                <div class="contact-method-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <div class="contact-method-text">
-                  <strong>Phone</strong>
-                  <a href="tel:+17324005052">(732) 400-5052</a>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="contact-method-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                </div>
-                <div class="contact-method-text">
-                  <strong>Email</strong>
-                  <a href="mailto:info@tristateattendants.com">info@tristateattendants.com</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="contact-socials">
-              <div class="contact-method">
-                <div class="contact-method-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                </div>
-                <div class="contact-method-text">
-                  <strong>LinkedIn</strong>
-                  <a href="https://www.linkedin.com/in/tristateattendants/" target="_blank" rel="noopener noreferrer">Connect with us</a>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="contact-method-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                </div>
-                <div class="contact-method-text">
-                  <strong>Facebook</strong>
-                  <a href="https://www.facebook.com/profile.php?id=100082944374778" target="_blank" rel="noopener noreferrer">Follow us</a>
-                </div>
-              </div>
-            </div>
-
+            <span class="section-label">Join Our Team</span>
+            <h2>Apply to Work With Us</h2>
+            <p>Interested in working with Tri-State Attendants & Janitorial Services? Fill out the application and our team will review your information for current and upcoming opportunities.</p>
             <div class="service-area">
-              <h4>Service Area</h4>
-              <p>Serving New York, New Jersey, Pennsylvania, Delaware, and surrounding areas. Contact us to confirm availability for your event.</p>
+              <h4>What We’re Looking For</h4>
+              <p>Reliable individuals with strong work ethic, customer service mindset, and availability for events, nights, and weekends.</p>
             </div>
           </div>
-
           <div class="quote-form-card reveal">
-            <h3>Request a Free Quote</h3>
-            <form id="quoteForm" class="form-grid" action="https://formspree.io/f/mojyeeej" method="POST">
-              <input type="hidden" name="formType" value="Quote Request">
-              <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="John Smith" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="john@example.com" required />
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
-              </div>
-              <div class="form-group">
-                <label for="service">Service Needed</label>
-                <select id="service" name="service" required>
-                  <option value="" disabled selected>Select a service</option>
-                  <option value="event-janitorial">Event Janitorial Services</option>
-                  <option value="pre-event">Pre-Event Cleaning</option>
-                  <option value="post-event">Post-Event Cleaning</option>
-                  <option value="other">Other / Not Sure</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="event-type">Event Type</label>
-                <input type="text" id="event-type" name="event-type" placeholder="Wedding, Festival, Concert..." />
-              </div>
-              <div class="form-group">
-                <label for="event-date">Preferred Date</label>
-                <input type="date" id="event-date" name="event-date" />
-              </div>
-              <div class="form-group full-width">
-                <label for="message">Tell Us More</label>
-                <textarea id="message" name="message" placeholder="Tell us about your event, venue size, or any specific needs..."></textarea>
-              </div>
-              <div class="form-submit full-width">
-                <button type="submit" class="btn btn-primary">Send Quote Request</button>
-                <p class="form-note">We typically respond within 24 hours.</p>
-              </div>
-            </form>
-            <div class="form-success" id="formSuccess">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <h3>Thank You!</h3>
-              <p>Your quote request has been received. We'll get back to you within 24 hours.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+            <h3>Job Application</h3>
+            <form class="form-grid" action="https://formspree.io/f/mojyeeej" method="POST">
+              <input type="hidden" name="formType" value="Job Application" />
 
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo-text">
-            Tri-State Attendants
-            <span>&amp; Janitorial Services</span>
-          </div>
-          <p>Experience You Can Trust. Service You Can Count On. Professional cleaning services across NJ, NYC, and Eastern PA.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul role="list">
-            <li><a href="#event-detail">Event Janitorial</a></li>
-            <li><a href="#events">Events We Cover</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul role="list">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact</a></li>
-            <li><a href="javascript:void(0)" onclick="showSection('contact')">Get a Quote</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJESv8c9jchUOr7VNgCRY5yZCyBnj23yy7gTW57o9lTUKGBQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul role="list">
-            <li><a href="tel:+17324005052">(732) 400-5052</a></li>
-            <li><a href="mailto:info@tristateattendants.com">info@tristateattendants.com</a></li>
-            <li><a href="https://www.linkedin.com/in/tristateattendants/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=100082944374778" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Tri-State Attendants &amp; Janitorial Services. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./app.js"></script>
-
-<script>
-function showSection(sectionId) {
-        
-  document.getElementById("job-application").style.display = "none";
-  document.getElementById("contact").style.display = "none";
-
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.style.display = "block";
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}
-</script>
-</body>
-</html>
+              <!-- BASIC INFO -->
+              <div class="form-group">
+                <label for="job-name">Full Name</label>
+                <input type="text" id="job-name" name="fullName" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for

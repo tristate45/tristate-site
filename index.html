@@ -591,8 +591,8 @@
 
               <div class="form-group">
                 <label for="quote-service">Service Needed</label>
-                <select id="quote-service" name="service" required>
-                  <option value="" disabled selected>Select a service</option>
+                <select id="quote-service" name="service">
+                  <option value="" selected>Select a service</option>
                   <option value="event-janitorial">Event Janitorial Services</option>
                   <option value="pre-event">Pre-Event Cleaning</option>
                   <option value="post-event">Post-Event Cleaning</option>
@@ -693,6 +693,8 @@
   <script>
     (function () {
       var jobSection = document.getElementById('job-application');
+      var quoteForm = document.getElementById('quoteForm');
+      var quoteSubmitButton = quoteForm ? quoteForm.querySelector('button[type="submit"]') : null;
 
       function showJobApplication() {
         if (!jobSection) return;
@@ -724,6 +726,13 @@
           showJobApplication();
         });
       });
+
+      if (quoteForm && quoteSubmitButton) {
+        quoteForm.addEventListener('submit', function () {
+          quoteSubmitButton.disabled = true;
+          quoteSubmitButton.textContent = 'Sending...';
+        });
+      }
     })();
   </script>
 </body>

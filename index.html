@@ -570,7 +570,7 @@
 
           <div class="quote-form-card reveal">
             <h3>Request a Free Quote</h3>
-            <form id="quoteForm" class="form-grid" action="https://formspree.io/f/mojyeeej" method="POST">
+            <form id="quoteForm" class="form-grid" action="https://formspree.io/f/mojyeeej" method="POST" novalidate>
               <input type="hidden" name="formType" value="Quote Request" />
               <input type="hidden" name="subject" value="Quote Request Submission" />
 
@@ -621,8 +621,9 @@
               </div>
 
               <div class="form-submit full-width">
-                <button type="submit" class="btn btn-primary">Send Quote Request</button>
+                <button type="submit" class="btn btn-primary" id="quoteSubmitButton">Send Quote Request</button>
                 <p class="form-note">We typically respond within 24 hours.</p>
+                <p class="form-note" id="quoteFormStatus" style="display: none; margin-top: 0.75rem;"></p>
               </div>
             </form>
 
@@ -694,7 +695,9 @@
     (function () {
       var jobSection = document.getElementById('job-application');
       var quoteForm = document.getElementById('quoteForm');
-      var quoteSubmitButton = quoteForm ? quoteForm.querySelector('button[type="submit"]') : null;
+      var quoteSubmitButton = document.getElementById('quoteSubmitButton');
+      var quoteFormStatus = document.getElementById('quoteFormStatus');
+      var formSuccess = document.getElementById('formSuccess');
 
       function showJobApplication() {
         if (!jobSection) return;
@@ -728,9 +731,57 @@
       });
 
       if (quoteForm && quoteSubmitButton) {
-        quoteForm.addEventListener('submit', function () {
+        quoteForm.addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          if (!quoteForm.reportValidity()) {
+            return;
+          }
+
           quoteSubmitButton.disabled = true;
           quoteSubmitButton.textContent = 'Sending...';
+          if (quoteFormStatus) {
+            quoteFormStatus.style.display = 'none';
+            quoteFormStatus.textContent = '';
+          }
+
+          try {
+            var response = await fetch(quoteForm.action, {
+              method: 'POST',
+              body: new FormData(quoteForm),
+              headers: {
+                'Accept': 'application/json'
+              }
+            });
+
+            if (response.ok) {
+              quoteForm.reset();
+              quoteForm.hidden = true;
+              if (formSuccess) {
+                formSuccess.hidden = false;
+              }
+            } else {
+              var data = await response.json().catch(function () {
+                return {};
+              });
+              var message = 'Something went wrong. Please try again.';
+              if (data && data.errors && data.errors.length > 0 && data.errors[0].message) {
+                message = data.errors[0].message;
+              }
+              if (quoteFormStatus) {
+                quoteFormStatus.textContent = message;
+                quoteFormStatus.style.display = 'block';
+              }
+            }
+          } catch (error) {
+            if (quoteFormStatus) {
+              quoteFormStatus.textContent = 'Network error. Please try again in a moment.';
+              quoteFormStatus.style.display = 'block';
+            }
+          } finally {
+            quoteSubmitButton.disabled = false;
+            quoteSubmitButton.textContent = 'Send Quote Request';
+          }
         });
       }
     })();

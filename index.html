@@ -342,13 +342,33 @@
       <option>Yes</option>
     </select>
   </div>
+<section class="contact-section" id="job-application" style="display:none;">
+  <div class="container">
+    <div class="contact-layout">
 
-  <!-- DOCUMENT VERIFICATION -->
-  <div class="form-group full-width">
-    <label>Identification You Will Provide</label>
-    <select name="idType" required>
- 
-<!-- PASTE NEW JOB APPLICATION SECTION HERE -->
+      <div class="contact-info">
+        <span class="section-label">Join Our Team</span>
+        <h2>Apply to Work With Us</h2>
+        <p>Fill out the application and we’ll review your information.</p>
+      </div>
+
+      <div class="quote-form-card">
+        <h3>Job Application</h3>
+
+        <form action="https://formspree.io/f/mojyeeej" method="POST">
+          <input type="hidden" name="formType" value="Job Application">
+
+          <input type="text" name="fullName" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone" required />
+
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
 </section>
     <!-- ======================== CONTACT / QUOTE FORM ======================== -->
 <section class="contact-section" id="contact">
